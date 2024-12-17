@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos' Eatery</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #32cd32; 
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background-color: #228b22; 
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ffd700; 
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/56/65/65/restaurant-is-clean-and.jpg?w=900&h=500&s=1'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px; 
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            height: 100vh; 
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 22px;
+            font-style: italic;
+            z-index: 1;
+            position: relative;
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .section h2 {
+            font-size: 42px;
+            color: #32cd32; 
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            margin-top: 40px;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .menu-item h3 {
+            font-size: 24px;
+            color: #32cd32;
+            margin: 20px;
+            font-weight: 600;
+        }
+
+        .menu-item p {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form button {
+            background-color: #32cd32; 
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #228b22; 
+        }
+
+        footer {
+            background-color: #32cd32; 
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Campos' Eatery</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Welcome to Campos' Eatery!</h2>
+    <p>Experience the taste of authentic Filipino dishes crafted with love and passion.</p>
+</section>
+
+<section id="menu" class="section">
+    <h2>Our Menu</h2>
+    <p>Delicious Filipino favorites made with fresh ingredients, perfect for any occasion!</p>
+
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="https://salu-salo.com/wp-content/uploads/2015/04/Pork-Adobo-3.jpg" alt="Adobo">
+            <h3>Adobo</h3>
+            <p>₱250</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://amiablefoods.com/wp-content/uploads/sinigang-na-baboy-1000.jpg" alt="Sinigang na Baboy">
+            <h3>Sinigang na Baboy</h3>
+            <p>₱250</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.sentro1771.com/ews/wp-content/uploads/2023/06/Lechon-Kawali_V2-scaled.jpg" alt="Lechon Kawali">
+            <h3>Lechon Kawali</h3>
+            <p>₱450</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://assets.unileversolutions.com/recipes-v2/237857.jpg" alt="Pancit Malabon">
+            <h3>Pancit Malabon</h3>
+            <p>₱350</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://bettysbest.ph/cdn/shop/products/DSCF0851_720x.jpg?v=1615444957" alt="Lumpiang Shanghai">
+            <h3>Lumpiang Shanghai</h3>
+            <p>₱350</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.maggi.ph/sites/default/files/styles/home_stage_1500_700/public/srh_recipes/3eb553f39b3c0d978fbb90169fb3d6a5.jpg?h=78aab1d8&itok=QYxT7Gkf" alt="Kare-Kare">
+            <h3>Kare-Kare</h3>
+            <p>₱450</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you. Feel free to reach out with any questions or feedback.</p>
+
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Campos' Eatery. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
